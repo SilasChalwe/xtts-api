@@ -64,6 +64,90 @@ php-lab/
     ├── reports/      # Analysis & reports
     └── outputs/      # Generated results
 ```
+---
+
+# Getting Started with PHP on Termux
+
+This guide will help you set up a PHP development environment on Termux, allowing you to run and test PHP scripts directly on your Android device.
+
+## Prerequisites
+- **Termux** installed on your device (from the [Google Play Store](https://play.google.com/store/apps/details?id=com.termux) or [GitHub](https://github.com/termux/termux-app)).
+
+## Steps to Get Started
+
+### 1. **Update Termux Packages**
+
+First, update the Termux package list to make sure you have the latest versions of the tools:
+
+```bash
+pkg update && pkg upgrade
+```
+
+### 2. **Install PHP and Composer**
+
+Next, install PHP, Composer (a PHP dependency manager), and a text editor (Nano) to write PHP scripts:
+
+```bash
+pkg install php php-composer nano
+```
+
+### 3. **Create Your PHP Script**
+
+Now, create a directory to store your PHP scripts:
+
+```bash
+mkdir ~/php-scripts
+```
+
+Navigate into your directory:
+
+```bash
+cd ~/php-scripts
+```
+
+Create a basic PHP script (`index.php`):
+
+```bash
+echo '<?php echo "Hello, Termux! Welcome to PHP!"; ?>' > index.php
+```
+
+### 4. **Run Your PHP Script**
+
+Execute the PHP script with:
+
+```bash
+php index.php
+```
+
+You should see the output:
+
+```
+Hello, Termux! Welcome to PHP!
+```
+
+### 5. **Optional: Install a Web Server (Apache)**
+
+If you want to run PHP through a web server (like Apache), install Apache and PHP support:
+
+```bash
+pkg install apache2 php-apache
+```
+
+Start the Apache server:
+
+```bash
+apachectl start
+```
+
+Access your script via `http://localhost:8080/index.php` in a browser.
+
+### 6. **Learning Resources**
+
+- **[PHP Manual](https://www.php.net/manual/en/)**: The official PHP documentation.
+- **[W3Schools PHP Tutorial](https://www.w3schools.com/php/)**: Beginner-friendly tutorials.
+- **[TutorialsPoint PHP Guide](https://www.tutorialspoint.com/php/index.htm)**: Comprehensive beginner to advanced PHP tutorials.
+
+---
 
 ## Getting Started
 1. **Clone the repository:**
